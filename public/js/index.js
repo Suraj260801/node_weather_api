@@ -27,7 +27,7 @@ weatherForm.addEventListener('submit', (event) => {
     //hitting above url calls app.get('weather') endpoint which runs server side js.
     //node gets response from server using get and sends to client side web.
     //fetch request receives json response from get request and sends to client side js.
-    let url = `/weather?address=${address}`
+    let url = `http://localhost:3000/weather?address=${address}`
     fetch(url).then((response) => {
         response.json().then((data) => {
             if (data.error) {
