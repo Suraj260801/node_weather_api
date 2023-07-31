@@ -6,7 +6,7 @@ const hbs = require('hbs')
 const app = express()
 const geoCoding=require("./utils/geocode")
 const forecast=require("./utils/forecast")
-const port=5002
+
 
 //using html templates files from different directory
 
@@ -33,7 +33,7 @@ app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
 
 
-app.get('/', (req, res) => {
+app.get('', (req, res) => {
     res.render('index', { title: "Weather App:HomePage", name: "Suraj" })
 })
 
@@ -104,7 +104,7 @@ app.get('/products', (req, res) => {
 app.get('*', (req, res) => {
     res.render('error', { message: "Page does not exists", name: "Suraj", error_code: 404 })
 })
-app.listen(port, () => {
+app.listen(3000, () => {
     console.log("Server is running on port No:3000")
 
 })
