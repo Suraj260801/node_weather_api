@@ -33,7 +33,7 @@ app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
 
 
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
     res.render('index', { title: "Weather App:HomePage", name: "Suraj" })
 })
 
