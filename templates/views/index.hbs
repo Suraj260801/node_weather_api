@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>weather app</title>
+  <!-- absolute path always starts from '/' i.e C drive but we dont use absolute path
+      here bacause anyone will have direct access to our file system directly from web
+      so we use relative path.here '/' refers to public dir that we have specified and 
+      it is considered as root accordind to web server.  -->
+  <link rel="stylesheet" href="/css/styles.css">
+  {{!-- /=public hence /css/styles.css =public/css/styles.css --}}
+  <link rel="icon" href="/images/cloudy.png">
+</head>
+
+<body>
+  <div class="main-content">
+    {{>header}}
+
+    <form>
+      <input placeholder="enter location">
+      <button>
+        Search
+      </button>
+
+    </form>
+
+    <p id="location"></p>
+    <p id="forecast"></p>
+    <p id="temprature"></p>
+  </div>
+
+
+  {{>footer}}
+  <script src="./js/index.js"></script>
+
+</body>
+
+</html>
